@@ -1,7 +1,6 @@
 name: Save to Archive
 
-on:
-    pull
+on: [push]
 
 jobs:
   build:
