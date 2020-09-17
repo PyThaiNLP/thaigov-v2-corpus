@@ -1,0 +1,32 @@
+name: Save to Archive
+
+on:
+    schedule:
+      # * is a special character in YAML so you have to quote this string
+      - cron:  '0 15 * * *'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      # You can use PyPy versions in python-version. For example, pypy2 and pypy3
+      matrix:
+        python-version: [3.6]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    # You can test your matrix by printing the current Python version
+    - name: Install
+      run: |
+        pip install -r requirements.txt
+    - name: Save archive
+      run: python run.py
+    - uses: stefanzweifel/git-auto-commit-action@v4.1.2
+      with:
+        commit_message: Apply news
+        branch: ${{ github.head_ref }}
