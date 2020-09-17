@@ -1,6 +1,8 @@
 name: Save to Archive
 
-on: [push]
+on:
+  schedule:
+    - cron: '0 0 * * *' # Once per day at midnight
 
 jobs:
   build:

@@ -7,7 +7,7 @@ import datetime, pytz
 import os
 tz = pytz.timezone('Asia/Bangkok')
 now1 = datetime.datetime.now(tz)
-f = os.path.join("data/",str(now1.strftime('%m_%d_%Y')))
+f = os.path.join("data/",str(now1.strftime('%d_%m_%Y')))
 if not os.path.exists(f):
     os.makedirs(f)
 with open("last_num.txt","r", encoding="utf-8-sig") as file:
