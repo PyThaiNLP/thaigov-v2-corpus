@@ -1,8 +1,7 @@
 name: Save to Archive
 
 on:
-    schedule:
-      - cron:  '14 15 * * *'
+    pull
 
 jobs:
   build:
