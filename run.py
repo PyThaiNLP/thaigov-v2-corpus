@@ -14,6 +14,7 @@ with open("last_num.txt","r", encoding="utf-8-sig") as file:
     i = int(file.read().strip())
 
 i2=1
+i_backup = i
 e = 0
 data={}
 headers = {'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'}
@@ -45,16 +46,18 @@ while e < 20:
 				data[collection] += 1
 				i2+=1
 				e = 0
+				i_backup= i
 				i+=1
 			else:
 				e += 1
+				i+=1
 		else:
 			e+=1
 	except Exception as ex:
 		e+=1
-		print(ex)
-	print(e)
-	print(i)
+#		#print(ex)#
+#	#print(e)
+#	#print(i)
 
 with open("last_num.txt","w",encoding="utf-8") as f:
-    f.write(str(i))
+    f.write(str(i_backup))
