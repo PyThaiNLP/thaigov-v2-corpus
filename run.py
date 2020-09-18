@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import codecs
 import re
+import archivenow
 import datetime, pytz
 import os
 tz = pytz.timezone('Asia/Bangkok')
@@ -46,6 +47,10 @@ while e < 20:
 				data[collection] += 1
 				i2+=1
 				e = 0
+				try:
+					archivenow.push(url)
+				except:
+					pass
 				i+=1
 				i_backup= i
 			else:

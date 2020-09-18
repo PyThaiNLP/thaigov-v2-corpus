@@ -2,7 +2,7 @@ name: Save to Archive
 
 on:
   schedule:
-    - cron: '0 12 * * *' # Once per day at midnight
+    - cron: '27 6 * * *' # Once per day at midnight
 
 jobs:
   build:
