@@ -3,7 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 import codecs
 import re
-import archivenow
+from archivenow import archivenow
+import time
 import datetime, pytz
 import os
 tz = pytz.timezone('Asia/Bangkok')
@@ -48,7 +49,8 @@ while e < 20:
 				i2+=1
 				e = 0
 				try:
-					archivenow.push(url)
+					archivenow.push(url,"ia")
+					time.sleep(2)
 				except:
 					pass
 				i+=1
