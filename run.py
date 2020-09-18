@@ -46,8 +46,8 @@ while e < 20:
 				data[collection] += 1
 				i2+=1
 				e = 0
-				i_backup= i
 				i+=1
+				i_backup= i
 			else:
 				e += 1
 				i+=1
