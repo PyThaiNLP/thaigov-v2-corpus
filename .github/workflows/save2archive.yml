@@ -1,14 +1,15 @@
 name: Save to Archive2
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  push
+#  schedule:
+#    - cron: '0 0 * * *'
 #  schedule:
 #    - cron: '12 0 * * *' # Once per day at midnight
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       # You can use PyPy versions in python-version. For example, pypy2 and pypy3
       matrix:
