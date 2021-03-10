@@ -70,7 +70,7 @@ while e < 20:
 			e+=1
 	except Exception as ex:
 		e+=1
-#		#print(ex)#
+		print(ex)#
 #	#print(e)
 #	#print(i)
 
