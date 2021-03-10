@@ -32,6 +32,7 @@ while e < 20:
 	try:
 		r = requests.get(url, headers=headers, timeout=60)
 		if r.status_code == 200:
+			print(url)
 			title = re.search('<title>(.*?)</title>',r.text).group(1) #soup.title.text
 			if title!="รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-":
 				soup = BeautifulSoup(r.text, "lxml")
