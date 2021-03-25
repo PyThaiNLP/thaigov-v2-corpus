@@ -38,7 +38,7 @@ while e < 20:
 				soup = BeautifulSoup(r.text, "lxml")
 				article = soup.find('div',{'class':'border-normal clearfix'}).text #soup.article.text
 				collection = soup.find('span',{'class':'Circular headtitle-2 font_level6 color2 col-xs-9 remove-xs'}).text
-				collection = ''.join(filter(str.isalnum, collection)) 
+				collection = re.sub('\?|\.|\!|\/|\;|\:', '', collection)
 
 				_text = ''
 				for line in article.split('\n'):
