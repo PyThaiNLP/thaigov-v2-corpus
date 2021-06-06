@@ -59,7 +59,7 @@ while e < 20:
 				e = 0
 				try:
 					archivenow.push(url,"ia")
-					time.sleep(2)
+					time.sleep(8)
 				except:
 					pass
 				i+=1
