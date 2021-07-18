@@ -30,7 +30,7 @@ headers = {'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.go
 while e < 20:
 	url="https://www.thaigov.go.th/news/contents/details/"+str(i)
 	try:
-		r = requests.get(url, headers=headers, timeout=60)
+		r = requests.get(url, headers=headers, timeout=60, verify=False)
 		if r.status_code == 200:
 			print(url)
 			title = re.search('<title>(.*?)</title>',r.text).group(1) #soup.title.text
