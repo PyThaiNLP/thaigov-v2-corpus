@@ -1,8 +1,18 @@
 name: Save to Archive2
 
 on:
-  schedule:
-    - cron: '0 11 * * *' # Once per day at midnight
+  push:
+    paths-ignore:
+      - '**.md'
+      - '**.yml'
+      - 'docs/**'
+  pull_request:
+    paths-ignore:
+      - '**.md'
+      - '**.yml'
+      - 'docs/**'
+#  schedule:
+#    - cron: '0 11 * * *' # Once per day at midnight
 
 jobs:
   build:
