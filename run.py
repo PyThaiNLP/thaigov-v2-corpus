@@ -55,6 +55,8 @@ while e < 500:
 	try:
 		driver.get(url)
 		title = driver.title
+		print(url)
+		print(title)
 		if title != "รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-":
 			if title!="รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-":
 				soup = BeautifulSoup(driver.page_source, "lxml")
