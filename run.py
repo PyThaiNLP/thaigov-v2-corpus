@@ -83,11 +83,6 @@ while e < 100:
 				data[collection] += 1
 				i2+=1
 				e = 0
-				try:
-					archivenow.push(url,"ia")
-					time.sleep(8)
-				except:
-					pass
 				i+=1
 				i_backup= i
 			else:
