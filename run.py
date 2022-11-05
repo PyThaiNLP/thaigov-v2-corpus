@@ -49,7 +49,7 @@ i_backup = i
 e = 0
 data={}
 headers = {'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'}
-while e < 20:
+while e < 500:
 	url="https://www.thaigov.go.th/news/contents/details/"+str(i)
 	try:
 		driver.get(url)
