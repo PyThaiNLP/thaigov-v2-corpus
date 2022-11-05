@@ -42,6 +42,7 @@ options = [
 for option in options:
 	chrome_options.add_argument(option)
 driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+import uuid
 
 
 i2=1
@@ -73,7 +74,7 @@ while e < 500:
 				
 				if collection not in data:
 					data[collection] = 1
-				with codecs.open(os.path.join(f,collection+"_"+str(data[collection])+".txt"), "w", "utf-8") as temp:
+				with codecs.open(os.path.join(f,collection+"_"+str(data[collection])+"_"+str(uuid.uuid4())+".txt"), "w", "utf-8") as temp:
 					temp.write(all_data)
 				temp.close()
 				data[collection] += 1
