@@ -13,7 +13,7 @@ jobs:
     strategy:
       # You can use PyPy versions in python-version. For example, pypy2 and pypy3
       matrix:
-        python-version: [3.6]
+        python-version: [3.9]
 
     steps:
     - uses: actions/checkout@v2
@@ -25,6 +25,10 @@ jobs:
     - name: Install
       run: |
         pip install -r requirements.txt
+    - name: Install software
+      run: sudo apt-get install -y chromium-browser
+    - name: Install the necessary packages
+      run: pip install requests webdriver-manager selenium pytest
     - name: Save archive
       run: python run.py
     - uses: stefanzweifel/git-auto-commit-action@v4.1.2
