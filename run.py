@@ -37,7 +37,9 @@ options = [
 	"--ignore-certificate-errors",
 	"--disable-extensions",
 	"--no-sandbox",
-	"--disable-dev-shm-usage"
+	"--disable-dev-shm-usage",
+	"--blink-settings=imagesEnabled=false",
+	"--disable-javascript"
 ]
 for option in options:
 	chrome_options.add_argument(option)
@@ -50,7 +52,7 @@ i_backup = i
 e = 0
 data={}
 headers = {'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'}
-while e < 500:
+while e < 100:
 	url="https://www.thaigov.go.th/news/contents/details/"+str(i)
 	try:
 		driver.get(url)
