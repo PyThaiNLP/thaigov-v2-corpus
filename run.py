@@ -93,6 +93,7 @@ while e < 500:
 				i+=1
 		else:
 			e+=1
+			i+=1
 	except Exception as ex:
 		e+=1
 		print(ex)#
