@@ -54,9 +54,8 @@ while e < 500:
 	url="https://www.thaigov.go.th/news/contents/details/"+str(i)
 	try:
 		driver.get(url)
-		if driver.title != "รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-":
-			print(url)
-			title = driver.title#re.search('<title>(.*?)</title>',r.text).group(1) #soup.title.text
+		title = driver.title
+		if title != "รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-":
 			if title!="รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-":
 				soup = BeautifulSoup(driver.page_source, "lxml")
 				article = soup.find('div',{'class':'border-normal clearfix'}).text #soup.article.text
@@ -82,7 +81,7 @@ while e < 500:
 				e = 0
 				try:
 					archivenow.push(url,"ia")
-					#time.sleep(8)
+					time.sleep(8)
 				except:
 					pass
 				i+=1
