@@ -6,11 +6,6 @@ on:
       - '**.md'
       - '**.yml'
       - 'docs/**'
-  pull_request:
-    paths-ignore:
-      - '**.md'
-      - '**.yml'
-      - 'docs/**'
 #  schedule:
 #    - cron: '0 11 * * *' # Once per day at midnight
 
