@@ -21,6 +21,28 @@ if not os.path.exists(f):
 
 with open("last_num.txt","r", encoding="utf-8-sig") as file:
     i = int(file.read().strip())
+# Code from https://github.com/delrayo/Pytest-Selenium-GitHubActions/blob/main/conftest.py
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.utils import ChromeType
+from selenium import webdriver
+
+chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.GOOGLE).install())
+chrome_options = Options()
+options = [
+	"--headless",
+	"--disable-gpu",
+	"--window-size=1920,1200",
+	"--ignore-certificate-errors",
+	"--disable-extensions",
+	"--no-sandbox",
+	"--disable-dev-shm-usage"
+]
+for option in options:
+	chrome_options.add_argument(option)
+driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+
 
 i2=1
 i_backup = i
@@ -30,12 +52,12 @@ headers = {'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.go
 while e < 20:
 	url="https://www.thaigov.go.th/news/contents/details/"+str(i)
 	try:
-		r = requests.get(url, headers=headers, timeout=60, verify=False)
-		if r.status_code == 200:
+		driver.get(url)
+		if driver.title != "รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-":
 			print(url)
-			title = re.search('<title>(.*?)</title>',r.text).group(1) #soup.title.text
+			title = driver.title#re.search('<title>(.*?)</title>',r.text).group(1) #soup.title.text
 			if title!="รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-":
-				soup = BeautifulSoup(r.text, "lxml")
+				soup = BeautifulSoup(driver.page_source, "lxml")
 				article = soup.find('div',{'class':'border-normal clearfix'}).text #soup.article.text
 				collection = soup.find('span',{'class':'Circular headtitle-2 font_level6 color2 col-xs-9 remove-xs'}).text
 				collection = re.sub('\?|\.|\!|\/|\;|\:', '', collection)
