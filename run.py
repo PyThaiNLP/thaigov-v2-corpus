@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import codecs
 import re
-from archivenow import archivenow
+#from archivenow import archivenow
 import time
 import datetime, pytz
 import os
@@ -57,11 +57,6 @@ while e < 20:
 				data[collection] += 1
 				i2+=1
 				e = 0
-				try:
-					archivenow.push(url,"ia")
-					time.sleep(8)
-				except:
-					pass
 				i+=1
 				i_backup= i
 			else:
