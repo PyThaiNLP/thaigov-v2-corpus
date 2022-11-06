@@ -21,47 +21,21 @@ if not os.path.exists(f):
 
 with open("last_num.txt","r", encoding="utf-8-sig") as file:
     i = int(file.read().strip())
-# Code from https://github.com/delrayo/Pytest-Selenium-GitHubActions/blob/main/conftest.py
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.core.utils import ChromeType
-from selenium import webdriver
-
-chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.GOOGLE).install())
-chrome_options = Options()
-options = [
-	"--headless",
-	"--disable-gpu",
-	"--window-size=1920,1200",
-	"--ignore-certificate-errors",
-	"--disable-extensions",
-	"--no-sandbox",
-	"--disable-dev-shm-usage",
-	"--blink-settings=imagesEnabled=false",
-	"--disable-javascript"
-]
-for option in options:
-	chrome_options.add_argument(option)
-driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
-import uuid
-
 
 i2=1
 i_backup = i
 e = 0
 data={}
-headers = {'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'}
-while e < 100:
+headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36"} 
+while e < 20:
 	url="https://www.thaigov.go.th/news/contents/details/"+str(i)
 	try:
-		driver.get(url)
-		title = driver.title
-		print(url)
-		print(title)
-		if title != "รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-":
+		r = requests.get(url, headers=headers, timeout=60, verify=False)
+		if r.status_code == 200:
+			print(url)
+			title = re.search('<title>(.*?)</title>',r.text).group(1) #soup.title.text
 			if title!="รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-":
-				soup = BeautifulSoup(driver.page_source, "lxml")
+				soup = BeautifulSoup(r.text, "lxml")
 				article = soup.find('div',{'class':'border-normal clearfix'}).text #soup.article.text
 				collection = soup.find('span',{'class':'Circular headtitle-2 font_level6 color2 col-xs-9 remove-xs'}).text
 				collection = re.sub('\?|\.|\!|\/|\;|\:', '', collection)
@@ -77,12 +51,17 @@ while e < 100:
 				
 				if collection not in data:
 					data[collection] = 1
-				with codecs.open(os.path.join(f,collection+"_"+str(data[collection])+"_"+str(uuid.uuid4())+".txt"), "w", "utf-8") as temp:
+				with codecs.open(os.path.join(f,collection+"_"+str(data[collection])+".txt"), "w", "utf-8") as temp:
 					temp.write(all_data)
 				temp.close()
 				data[collection] += 1
 				i2+=1
 				e = 0
+				try:
+					archivenow.push(url,"ia")
+					time.sleep(8)
+				except:
+					pass
 				i+=1
 				i_backup= i
 			else:
@@ -90,7 +69,6 @@ while e < 100:
 				i+=1
 		else:
 			e+=1
-			i+=1
 	except Exception as ex:
 		e+=1
 		print(ex)#

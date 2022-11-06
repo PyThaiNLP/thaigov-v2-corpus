@@ -1,0 +1,22 @@
+รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-สรรพากรยกเว้น VAT ส่งเสริมการลงทุนใน Data Centre
+
+
+วันอังคารที่ 28 มิถุนายน 2565
+พิมพ์
+สรรพากรยกเว้น VAT ส่งเสริมการลงทุนใน Data Centre
+ครม.อนุมัติหลักการมาตรการภาษีเพื่อส่งเสริมการลงทุนในกิจการศูนย์ข้อมูล โดยยกเว้นภาษีมูลค่าเพิ่มสำหรับการให้บริการพื้นที่เก็บข้อมูลอิเล็กทรอนิกส์ผ่านเครือข่ายอินเทอร์เน็ต เพื่อสนับสนุนให้เกิดการลงทุนและเพิ่มความสามารถในการแข่งขันด้านราคาค่าบริการ
+นายอาคม เติมพิทยาไพสิฐ รัฐมนตรีว่าการกระทรวงการคลัง เปิดเผยว่า “คณะรัฐมนตรีอนุมัติหลักการมาตรการภาษีเพื่อส่งเสริมการลงทุนในกิจการศูนย์ข้อมูล (Data Centre) โดยยกเว้นภาษีมูลค่าเพิ่ม (VAT) สำหรับการให้บริการพื้นที่เก็บข้อมูลอิเล็กทรอนิกส์ผ่านเครือข่ายอินเทอร์เน็ต (Data Hosting Service) เพื่อสนับสนุนให้เกิดการลงทุนและเพิ่มความสามารถในการแข่งขันด้านราคาค่าบริการ”
+นายลวรณ แสงสนิท อธิบดีกรมสรรพากร กล่าวเพิ่มเติมว่า “กระทรวงการคลัง โดยกรมสรรพากรเห็นถึงความสำคัญของธุรกิจ Data Centre ซึ่งมีลักษณะเป็นการให้บริการพื้นที่เก็บข้อมูลอิเล็กทรอนิกส์ ผ่านเครือข่ายอินเทอร์เน็ต อันเป็นที่นิยมใช้ในปัจจุบัน และเพื่อผลักดันการลงทุนในระดับ Hyperscale ให้ประเทศไทยเป็นศูนย์กลางดิจิทัลของภูมิภาค จึงได้เสนอร่างพระราชกฤษฎีกา ออกตามความในประมวลรัษฎากร ว่าด้วยการยกเว้นภาษีมูลค่าเพิ่ม (ฉบับที่ .. ) พ.ศ. .... เพื่อยกเว้นภาษีมูลค่าเพิ่มสำหรับการให้บริการ Data Hosting Service ดังต่อไปนี้
+(1) การให้บริการพื้นที่ของเซิร์ฟเวอร์และอุปกรณ์ที่เกี่ยวข้องเพื่อใช้ในการจัดเก็บ ประมวลผล และเชื่อมต่อข้อมูลทางอิเล็กทรอนิกส์ผ่านทางเครือข่ายอินเตอร์เน็ต
+(2) การให้บริการสนับสนุนการให้บริการตามข้อ (1) ดังนี้ การให้บริการสำรองข้อมูล เพื่อป้องกันเหตุขัดข้องอันทำให้ข้อมูลเกิดความเสียหาย (Disaster Recovery Site), การให้บริการเชื่อมต่อเครือข่ายกับผู้ให้บริการอินเทอร์เน็ตหรือผู้ให้บริการคลาวด์ และการให้บริการบริหารจัดการระบบและการรักษาความปลอดภัยทางสารสนเทศ
+ทั้งนี้ ผู้ประกอบการจดทะเบียนภาษีมูลค่าเพิ่มที่จะได้รับสิทธิยกเว้นภาษีมูลค่าเพิ่มดังกล่าว จะต้องเป็นผู้ประกอบกิจการ Data Centre ที่มีคุณสมบัติและปฏิบัติตามหลักเกณฑ์ วิธีการ และเงื่อนไขครบถ้วนตามที่อธิบดีกรมสรรพากรประกาศกำหนด และได้แจ้งความประสงค์เพื่อขอใช้สิทธิต่ออธิบดีกรมสรรพากรภายใน 5 ปี นับแต่วันที่พระราชกฤษฎีกามีผลใช้บังคับ”
+หากมีข้อสงสัยสอบถามรายละเอียดได้ที่สำนักงานสรรพากรทุกแห่งทั่วประเทศ หรือศูนย์สารนิเทศสรรพากร (RD Intelligence Center) โทร. 1161
+The Revenue Department exempts VAT to promote data centre investment
+Mr. Arkhom Termpittayapaisith, Minister of Finance, has announced that the Cabinet of Thailand has today approved in principle tax measure to promote data centre investment which provides Value Added Tax (VAT) exemption on data hosting service in order to attract data centre investment to Thailand and increase the country’s competitiveness in data hosting service pricing.
+Mr. Lavaron Sangsnit, Director-General of the Revenue Department, has said that the Revenue Department, Ministry of Finance has recognised the importance of the data centre industry and data hosting service which are growing rapidly. He has added that with an effort to spur hyperscale data centre investment for Thailand to become a regional digital hub, the Revenue Department has proposed the draft Royal Decree issued under the Revenue Code Regarding Value Added Tax Exemption (No. ..) B.E. …. to provide VAT exemption on the following services:
+(1) Server and related equipment services for storing, computing, and connecting electronic data over the internet;
+(2) Supporting services of the above services which are disaster recovery site, connection with internet service provider or cloud service provider, and system management and security services.
+A VAT registrant applying for the exemption shall be a data centre business operator which meets eligibility requirements and complies with regulations prescribed by the Director-General of the Revenue Department as well as notifies the Director-General of its application for the exemption within 5 years from the day that the Royal Decree comes into force.
+For further inquiries, please contact Area Revenue Offices nationwide or RD Intelligence Center, dial 1161.
+
+ที่มา : https://www.thaigov.go.th/news/contents/details/56257
