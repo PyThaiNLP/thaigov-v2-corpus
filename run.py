@@ -2,6 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 import codecs
+import uuid
 import re
 #from archivenow import archivenow
 import time
@@ -51,10 +52,11 @@ while e < 20:
 				
 				if collection not in data:
 					data[collection] = 1
-				with codecs.open(os.path.join(f,collection+"_"+str(data[collection])+".txt"), "w", "utf-8") as temp:
+				with codecs.open(os.path.join(f,collection+"_"+str(data[collection])+"_"+str(uuid.uuid4())+".txt"), "w", "utf-8") as temp:
 					temp.write(all_data)
 				temp.close()
 				data[collection] += 1
+				print(str(title)+"\t"+str(url))
 				i2+=1
 				e = 0
 				i+=1
