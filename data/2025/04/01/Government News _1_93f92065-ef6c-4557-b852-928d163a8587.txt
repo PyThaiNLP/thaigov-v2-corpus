@@ -1,0 +1,13 @@
+รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-Virtual Cell Broadcast system to be temporarily put in place for disaster warning until Cell Broadcast system completely developed
+
+
+วันอังคารที่ 1 เมษายน 2568
+01/04/2568
+พิมพ์
+Virtual Cell Broadcast system to be temporarily put in place for disaster warning until Cell Broadcast system completely developed
+Virtual Cell Broadcast system to be temporarily put in place for disaster warning until Cell Broadcast system completely developed
+March 31, 2025, at 1505hrs, at the Government House, Prime Minister Paetongtarn Shinawatra held a press conference on the meeting to follow up on the issue of disaster alert system which she chaired. Participating in the meeting were representatives of all relevant agencies, including mobile phone operators (AIS and TRUE), and National Telecom Public Company Limited. The meeting aimed at lesson-learned visualizing following the earthquake that rocked Thailand and Myanmar on March 28, 2025.
+According to the Prime Minister, a cell broadcast system is being developed, and will be ready for use this coming July. Before then, the meeting has resolved to revise the Standard Operating Procedures (SOPs) to allow SMS messages to be sent immediately by the Department of Disaster Prevention and Mitigation (DDPM) upon receiving a notification from the Thai Meteorological Department without going through prior analyzation that will take another hour. The Prime Minister ordered that messages sent must be concise, accurate, and easy to understand. Additionally, between now and July 2025, the meeting agreed to have Virtual Cell Broadcast system temporarily put in place. For 70,000,000 numbers under the Android system, DDPM will send messages directly to the operators, and for 50,000,000 numbers under the iOS system, SMS will also be sent while Ministry of Digital Economy and Society and NBTC will liaise with Apple Inc. to expedite temporary use of the Virtual Cell Broadcast system.
+The Prime Minister emphasized that SMS or the Cell Broadcast system is not the only way of disaster warning. There are other Government channels and platforms, such as LINE, Facebook, and TV Pool, to communicate with the public in time of disasters, including earthquakes. Once the Cell Broadcast system is completely developed, the public will immediately receive SMS warnings with sound alerts in cases of flood or storms, and other disasters.
+
+ที่มา : https://www.thaigov.go.th/news/contents/details/94965
