@@ -69,12 +69,12 @@ while e < 200:
 	try:
 		browser.get(url)
 		#r = requests.get(url, headers=headers, timeout=60, verify=False)
-		print(r.status_code)
+		# print(r.status_code)
 		text=browser.page_source
 		browser.close()
 		if "<title>รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-</title>" not in text: #r.status_code == 200:
 			print(url)
-			title = re.search('<title>(.*?)</title>',r.text).group(1) #soup.title.text
+			title = re.search('<title>(.*?)</title>',text).group(1) #soup.title.text
 			if title!="รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-":
 				soup = BeautifulSoup(text, "lxml")
 				article = soup.find('div',{'class':'border-normal clearfix'}).text #soup.article.text
