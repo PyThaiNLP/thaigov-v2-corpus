@@ -10,6 +10,8 @@ import datetime, pytz
 import os
 tz = pytz.timezone('Asia/Bangkok')
 now1 = datetime.datetime.now(tz)
+import cloudscraper
+
 
 # firefox
 # Add driver to PATH
@@ -67,11 +69,12 @@ headers = {"User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.go
 while e < 200:
 	url="https://www.thaigov.go.th/news/contents/details/"+str(i)
 	try:
-		browser.get(url)
-		time.sleep(1)
+		# browser.get(url)
+		# time.sleep(1)
 		#r = requests.get(url, headers=headers, timeout=60, verify=False)
 		# print(r.status_code)
-		text=str(browser.page_source)
+		scraper = cloudscraper.create_scraper()
+		text=scraper.get(url).text #str(browser.page_source)
 		print(text)
 		# browser.close()
 		if "<title>รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-</title>" not in text: #r.status_code == 200:
