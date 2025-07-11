@@ -37,7 +37,7 @@ options.add_experimental_option('excludeSwitches', ['enable-automation'])
 options.add_experimental_option('useAutomationExtension', False)
 
 
-driver = webdriver.Chrome(options=options, service=Service(
+browser = webdriver.Chrome(options=options, service=Service(
     '/usr/bin/chromedriver'))
 
 if REMOTE:
@@ -71,6 +71,7 @@ while e < 200:
 		#r = requests.get(url, headers=headers, timeout=60, verify=False)
 		print(r.status_code)
 		text=browser.page_source
+		browser.close()
 		if "<title>รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-</title>" not in text: #r.status_code == 200:
 			print(url)
 			title = re.search('<title>(.*?)</title>',r.text).group(1) #soup.title.text
