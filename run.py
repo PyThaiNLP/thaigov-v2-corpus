@@ -27,8 +27,9 @@ i2=1
 i_backup = i
 e = 0
 data={}
-headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36"} 
-while e < 20:
+# Google bot
+headers = {"User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"} 
+while e < 200:
 	url="https://www.thaigov.go.th/news/contents/details/"+str(i)
 	try:
 		r = requests.get(url, headers=headers, timeout=60, verify=False)
