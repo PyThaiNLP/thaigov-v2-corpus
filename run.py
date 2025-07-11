@@ -70,8 +70,8 @@ while e < 200:
 		browser.get(url)
 		#r = requests.get(url, headers=headers, timeout=60, verify=False)
 		# print(r.status_code)
-		text=browser.page_source
-		browser.close()
+		text=str(browser.page_source)
+		# browser.close()
 		if "<title>รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-</title>" not in text: #r.status_code == 200:
 			print(url)
 			title = re.search('<title>(.*?)</title>',text).group(1) #soup.title.text
