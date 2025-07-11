@@ -68,9 +68,11 @@ while e < 200:
 	url="https://www.thaigov.go.th/news/contents/details/"+str(i)
 	try:
 		browser.get(url)
+		time.sleep(1)
 		#r = requests.get(url, headers=headers, timeout=60, verify=False)
 		# print(r.status_code)
 		text=str(browser.page_source)
+		print(text)
 		# browser.close()
 		if "<title>รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-</title>" not in text: #r.status_code == 200:
 			print(url)
@@ -78,7 +80,9 @@ while e < 200:
 			if title!="รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-":
 				soup = BeautifulSoup(text, "lxml")
 				article = soup.find('div',{'class':'border-normal clearfix'}).text #soup.article.text
+				print("article")
 				collection = soup.find('span',{'class':'Circular headtitle-2 font_level6 color2 col-xs-9 remove-xs'}).text
+				print("collection")
 				collection = re.sub('\?|\.|\!|\/|\;|\:', '', collection)
 
 				_text = ''
