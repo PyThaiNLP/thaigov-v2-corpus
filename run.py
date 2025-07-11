@@ -33,6 +33,7 @@ while e < 200:
 	url="https://www.thaigov.go.th/news/contents/details/"+str(i)
 	try:
 		r = requests.get(url, headers=headers, timeout=60, verify=False)
+		print(r.status_code)
 		if r.status_code == 200:
 			print(url)
 			title = re.search('<title>(.*?)</title>',r.text).group(1) #soup.title.text
