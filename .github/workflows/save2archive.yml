@@ -24,9 +24,9 @@ jobs:
       run: |
         pip install -r requirements.txt
     - name: Install software
-      run: sudo apt-get install -y chromium-browser
+      run: sudo apt-get install -y firefox  xvfb
     - name: Install the necessary packages
-      run: pip install requests webdriver-manager selenium pytest
+      run: pip install requests webdriver-manager selenium pytest pyvirtualdisplay selenium webdriver_manager
     - name: Save archive
       run: python run.py
     - uses: stefanzweifel/git-auto-commit-action@v4.1.2
