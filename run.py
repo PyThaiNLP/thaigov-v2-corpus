@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import codecs
 import uuid
 import re
-from archivenow import archivenow
+#from archivenow import archivenow
 import time
 import datetime, pytz
 import os
@@ -15,37 +15,37 @@ import cloudscraper
 
 # firefox
 # Add driver to PATH
-import sys
-sys.path.insert(0, '/usr/lib/chromium-browser/chromedriver')
+# import sys
+# sys.path.insert(0, '/usr/lib/chromium-browser/chromedriver')
 
-from webdriver_manager.firefox import GeckoDriverManager
-from selenium import webdriver
-from pyvirtualdisplay import Display
+# from webdriver_manager.firefox import GeckoDriverManager
+# from selenium import webdriver
+# from pyvirtualdisplay import Display
 
-REMOTE=True
-if REMOTE:
-    display = Display(visible=0, size=(800, 600))
-    display.start()
+# REMOTE=True
+# if REMOTE:
+#     display = Display(visible=0, size=(800, 600))
+#     display.start()
 
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+# from selenium import webdriver
+# from selenium.webdriver.chrome.service import Service
 
-options = webdriver.chrome.options.Options()
-options.add_argument('--no-sandbox')
-options.add_argument('--disable-infobars')
-options.add_argument('--disable-dev-shm-usage')
-options.add_argument('--disable-blink-features=AutomationControlled')
-options.add_experimental_option('excludeSwitches', ['enable-automation'])
-options.add_experimental_option('useAutomationExtension', False)
+# options = webdriver.chrome.options.Options()
+# options.add_argument('--no-sandbox')
+# options.add_argument('--disable-infobars')
+# options.add_argument('--disable-dev-shm-usage')
+# options.add_argument('--disable-blink-features=AutomationControlled')
+# options.add_experimental_option('excludeSwitches', ['enable-automation'])
+# options.add_experimental_option('useAutomationExtension', False)
 
 
-browser = webdriver.Chrome(options=options, service=Service(
-    '/usr/bin/chromedriver'))
+# browser = webdriver.Chrome(options=options, service=Service(
+#     '/usr/bin/chromedriver'))
 
-if REMOTE:
-    #https://stackoverflow.com/a/17536547/2268280
-    browser.set_page_load_timeout(30)
-#
+# if REMOTE:
+#     #https://stackoverflow.com/a/17536547/2268280
+#     browser.set_page_load_timeout(30)
+# #
 
 f = os.path.join("data/",str(now1.strftime('%Y')))
 if not os.path.exists(f):
@@ -75,17 +75,17 @@ while e < 200:
 		# print(r.status_code)
 		scraper = cloudscraper.create_scraper()
 		text=scraper.get(url).text #str(browser.page_source)
-		print(text)
+		# print(text)
 		# browser.close()
 		if "<title>รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-</title>" not in text: #r.status_code == 200:
-			print(url)
+			# print(url)
 			title = re.search('<title>(.*?)</title>',text).group(1) #soup.title.text
 			if title!="รัฐบาลไทย-ข่าวทำเนียบรัฐบาล-":
 				soup = BeautifulSoup(text, "lxml")
 				article = soup.find('div',{'class':'border-normal clearfix'}).text #soup.article.text
-				print("article")
+				# print("article")
 				collection = soup.find('span',{'class':'Circular headtitle-2 font_level6 color2 col-xs-9 remove-xs'}).text
-				print("collection")
+				# print("collection")
 				collection = re.sub('\?|\.|\!|\/|\;|\:', '', collection)
 
 				_text = ''
@@ -104,11 +104,11 @@ while e < 200:
 				temp.close()
 				data[collection] += 1
 				print(str(title)+"\t"+str(url))
-				try:
-					archivenow.push(url,"ia")
-					time.sleep(8)
-				except:
-					pass
+				#try:
+				#	archivenow.push(url,"ia")
+				#	time.sleep(8)
+				#except:
+				#	pass
 				i2+=1
 				e = 0
 				i+=1
@@ -120,7 +120,7 @@ while e < 200:
 			e+=1
 	except Exception as ex:
 		e+=1
-		print(ex)#
+		# print(ex)#
 #	#print(e)
 #	#print(i)
 
