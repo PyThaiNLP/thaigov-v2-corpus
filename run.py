@@ -65,7 +65,7 @@ data = {}
 
 print("Starting scraper...")
 try:
-    while e < 50:
+    while e < 20:
         url = "https://www.thaigov.go.th/news/contents/details/" + str(i)
         try:
             # Use Selenium to get the page
