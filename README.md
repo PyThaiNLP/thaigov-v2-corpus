@@ -1,5 +1,11 @@
 # ThaiGov V2 Corpus
 
+```
+Status: Discontinued project
+
+After Sep 20, Thai government website updated the policy the website that disallowed any web scraping from website, even though there were Thai government news that should allowed and public domain by "Official Information Act, B.E. 2540 (1997) and Copyright Act B.E. 2537.
+```
+
 
 ## English
 - Data from Thai government website. https://www.thaigov.go.th
